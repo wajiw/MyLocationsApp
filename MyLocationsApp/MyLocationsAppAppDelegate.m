@@ -7,9 +7,11 @@
 //
 
 #import "MyLocationsAppAppDelegate.h"
+#import "MapViewController.h"
 
 @implementation MyLocationsAppAppDelegate
 
+@synthesize navController=_navController;
 
 @synthesize window=_window;
 
@@ -21,7 +23,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    NSError *error;
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    NSManagedObject *location1 = [NSEntityDescription insertNewObjectForEntityForName:@"Locations" inManagedObjectContext:context];
+    
+    [location1 setValue:@"Location B" forKey:@"name"];
+    [location1 setValue:@"red" forKey:@"type"];
+    [location1 setValue:[NSNumber numberWithFloat:41.86924326] forKey:@"lat"];
+    [location1 setValue:[NSNumber numberWithFloat:-87.64330694] forKey:@"lon"];
+    
+    if(![context save:&error])
+    {
+        NSLog(@"Couldn't save: %@",[error localizedDescription]);
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Locations" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for(NSManagedObject *location in fetchedObjects)
+    {
+        NSLog(@"Name: %@",[location valueForKey:@"name"]);
+        NSLog(@"Type: %@",[location valueForKey:@"type"]);
+        NSLog(@"lat: %@",[location valueForKey:@"lat"]);
+        NSLog(@"lon: %@",[location valueForKey:@"lon"]);
+    }
+    [fetchRequest release]; 
+    
+    NavController *root = (NavController *) [_navController topViewController];
+    
+    root.context = [self managedObjectContext];
+    
+    [self.window addSubview:_navController.view];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -180,6 +219,13 @@
     }    
     
     return __persistentStoreCoordinator;
+}
+
+- (IBAction)showMap:(id)sender {
+    MapViewController *viewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    viewController.context = [self managedObjectContext];
+    
+    [self.navController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - Application's Documents directory

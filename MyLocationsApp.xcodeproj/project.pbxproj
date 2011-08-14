@@ -16,6 +16,12 @@
 		2F43683313F49AFC009B87F5 /* MyLocationsAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F43683213F49AFC009B87F5 /* MyLocationsAppAppDelegate.m */; };
 		2F43683613F49AFC009B87F5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F43683413F49AFC009B87F5 /* MainWindow.xib */; };
 		2F43683913F49AFC009B87F5 /* MyLocationsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F43683713F49AFC009B87F5 /* MyLocationsApp.xcdatamodeld */; };
+		2F43684113F4A345009B87F5 /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F43684013F4A345009B87F5 /* NavController.m */; };
+		2F43684413F4A521009B87F5 /* Locations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F43684313F4A521009B87F5 /* Locations.m */; };
+		2F43684813F4B4C1009B87F5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F43684613F4B4C0009B87F5 /* MapViewController.m */; };
+		2F43684913F4B4C1009B87F5 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F43684713F4B4C0009B87F5 /* MapViewController.xib */; };
+		2F43684B13F4B7B9009B87F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F43684A13F4B7B9009B87F5 /* MapKit.framework */; };
+		2F43684E13F4BE66009B87F5 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F43684D13F4BE65009B87F5 /* Location.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,14 +30,24 @@
 		2F43682213F49AFC009B87F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2F43682413F49AFC009B87F5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2F43682613F49AFC009B87F5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		2F43682A13F49AFC009B87F5 /* MyLocationsApp-Info.plist */ = {isa = PBXFileReference; path = "MyLocationsApp-Info.plist"; sourceTree = "<group>"; };
+		2F43682A13F49AFC009B87F5 /* MyLocationsApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyLocationsApp-Info.plist"; sourceTree = "<group>"; };
 		2F43682C13F49AFC009B87F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2F43682E13F49AFC009B87F5 /* MyLocationsApp-Prefix.pch */ = {isa = PBXFileReference; path = "MyLocationsApp-Prefix.pch"; sourceTree = "<group>"; };
+		2F43682E13F49AFC009B87F5 /* MyLocationsApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyLocationsApp-Prefix.pch"; sourceTree = "<group>"; };
 		2F43682F13F49AFC009B87F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2F43683113F49AFC009B87F5 /* MyLocationsAppAppDelegate.h */ = {isa = PBXFileReference; path = MyLocationsAppAppDelegate.h; sourceTree = "<group>"; };
+		2F43683113F49AFC009B87F5 /* MyLocationsAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLocationsAppAppDelegate.h; sourceTree = "<group>"; };
 		2F43683213F49AFC009B87F5 /* MyLocationsAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLocationsAppAppDelegate.m; sourceTree = "<group>"; };
 		2F43683513F49AFC009B87F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		2F43683813F49AFC009B87F5 /* MyLocationsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyLocationsApp.xcdatamodel; sourceTree = "<group>"; };
+		2F43683F13F4A345009B87F5 /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
+		2F43684013F4A345009B87F5 /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
+		2F43684213F4A521009B87F5 /* Locations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locations.h; sourceTree = "<group>"; };
+		2F43684313F4A521009B87F5 /* Locations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locations.m; sourceTree = "<group>"; };
+		2F43684513F4B4C0009B87F5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		2F43684613F4B4C0009B87F5 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		2F43684713F4B4C0009B87F5 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		2F43684A13F4B7B9009B87F5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2F43684C13F4BE65009B87F5 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		2F43684D13F4BE65009B87F5 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F43684B13F4B7B9009B87F5 /* MapKit.framework in Frameworks */,
 				2F43682113F49AFC009B87F5 /* UIKit.framework in Frameworks */,
 				2F43682313F49AFC009B87F5 /* Foundation.framework in Frameworks */,
 				2F43682513F49AFC009B87F5 /* CoreGraphics.framework in Frameworks */,
@@ -52,6 +69,7 @@
 		2F43681113F49AFC009B87F5 = {
 			isa = PBXGroup;
 			children = (
+				2F43684A13F4B7B9009B87F5 /* MapKit.framework */,
 				2F43682813F49AFC009B87F5 /* MyLocationsApp */,
 				2F43681F13F49AFC009B87F5 /* Frameworks */,
 				2F43681D13F49AFC009B87F5 /* Products */,
@@ -84,7 +102,16 @@
 				2F43683213F49AFC009B87F5 /* MyLocationsAppAppDelegate.m */,
 				2F43683413F49AFC009B87F5 /* MainWindow.xib */,
 				2F43683713F49AFC009B87F5 /* MyLocationsApp.xcdatamodeld */,
+				2F43683F13F4A345009B87F5 /* NavController.h */,
+				2F43684013F4A345009B87F5 /* NavController.m */,
 				2F43682913F49AFC009B87F5 /* Supporting Files */,
+				2F43684213F4A521009B87F5 /* Locations.h */,
+				2F43684313F4A521009B87F5 /* Locations.m */,
+				2F43684513F4B4C0009B87F5 /* MapViewController.h */,
+				2F43684613F4B4C0009B87F5 /* MapViewController.m */,
+				2F43684713F4B4C0009B87F5 /* MapViewController.xib */,
+				2F43684C13F4BE65009B87F5 /* Location.h */,
+				2F43684D13F4BE65009B87F5 /* Location.m */,
 			);
 			path = MyLocationsApp;
 			sourceTree = "<group>";
@@ -149,6 +176,7 @@
 			files = (
 				2F43682D13F49AFC009B87F5 /* InfoPlist.strings in Resources */,
 				2F43683613F49AFC009B87F5 /* MainWindow.xib in Resources */,
+				2F43684913F4B4C1009B87F5 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +190,10 @@
 				2F43683013F49AFC009B87F5 /* main.m in Sources */,
 				2F43683313F49AFC009B87F5 /* MyLocationsAppAppDelegate.m in Sources */,
 				2F43683913F49AFC009B87F5 /* MyLocationsApp.xcdatamodeld in Sources */,
+				2F43684113F4A345009B87F5 /* NavController.m in Sources */,
+				2F43684413F4A521009B87F5 /* Locations.m in Sources */,
+				2F43684813F4B4C1009B87F5 /* MapViewController.m in Sources */,
+				2F43684E13F4BE66009B87F5 /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
